@@ -6,11 +6,12 @@ public class ObjectClass {
 
     private String Title;
     private String desc;
-    private String Pic;
+    private String imagePic;
 
-    public ObjectClass(String Title, String desc) {
+    public ObjectClass(String Title, String desc, String imagePic) {
         this.Title = Title;
         this.desc = desc;
+        this.imagePic = imagePic;
 
     }
 
@@ -23,6 +24,6 @@ public class ObjectClass {
     }
 
     public String getPic() {
-        return Pic;
+        return imagePic;
     }
 }

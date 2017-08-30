@@ -53,6 +53,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         //set the desc
         holder.desc.setText(objectClass.getDesc());
 
+        //use picasso to load image
+        Picasso.with(context)
+                .load(objectClass.getPic())
+                .into(holder.imageView);
+
     }
 
     @Override
@@ -66,13 +71,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         //get the views in the cardView
         public TextView title;
         public  TextView desc;
+        public ImageView imageView;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             title = (TextView) itemView.findViewById(R.id.item_titile);
             desc = (TextView) itemView.findViewById(R.id.item_desc);
-
+            imageView = (ImageView) itemView.findViewById(R.id.imageView);
 
         }
     }
